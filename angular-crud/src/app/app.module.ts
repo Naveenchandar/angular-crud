@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { FirstComponent } from './components/first/first-component';
 import { SecondComponent } from './components/second/second.component';
+import { DataBindingComponent } from './components/databinding/data-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     SecondComponent,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,

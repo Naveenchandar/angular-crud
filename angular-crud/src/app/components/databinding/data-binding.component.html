@@ -1,0 +1,6 @@
+<!-- ngmodel is for two way data binding. combing property and event binding -->
+<input type="text" placeholder="Please enter text" [(ngModel)]="username" />
+<!-- String interpolation is for display -->
+<p>{{username}}</p>
+<!-- property binding (disabled) and event binding (click) -->
+<button [disabled]="!username" (click)="resetUsername()">Reset</button>
