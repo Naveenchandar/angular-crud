@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   inputText = 'angular-crud';
+  serverData = "This data passing from app to server";
+  eventFromApp() {
+    this.serverData = "data changed using output event"
+  }
 }

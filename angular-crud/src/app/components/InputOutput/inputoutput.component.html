@@ -1,0 +1,25 @@
+<h1>Servers</h1>
+<h2>{{serverData}} - {{dataStatic}}</h2>
+<button (click)="updateServerDataContent()">update the above content</button>
+<br />
+<input type="text" placeholder="Add server" [(ngModel)]="server" />
+<br />
+<input type="text" placeholder="Add server content" [(ngModel)]="serverContent" />
+<br />
+<div>
+    <button (click)="addServer()">Add server</button>
+    <br />
+    <button (click)="addServerContent()">Add server content</button>
+</div>
+<section *ngIf="servers.length > 0">
+    <h4>Servers</h4>
+    <ul *ngFor="let item of servers">
+        <li>{{item}}</li>
+    </ul>
+</section>
+<section *ngIf="serversContent.length > 0">
+    <h4>Servers Content</h4>
+    <ul *ngFor="let item of serversContent">
+        <li>{{item}}</li>
+    </ul>
+</section>
