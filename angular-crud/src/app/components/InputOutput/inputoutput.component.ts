@@ -3,6 +3,9 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
 @Component({
     selector: "app-inputoutput",
     templateUrl: "./inputoutput.component.html",
+    // styles: [
+    //     'p {color: blueviolet;}'
+    // ]
 })
 export class InputOutComponent {
     @Input() serverData!: String
