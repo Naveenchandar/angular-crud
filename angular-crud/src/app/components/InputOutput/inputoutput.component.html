@@ -2,14 +2,16 @@
 <h2>{{serverData}} - {{dataStatic}}</h2>
 <button (click)="updateServerDataContent()">update the above content</button>
 <br />
-<input type="text" placeholder="Add server" [(ngModel)]="server" />
+<!-- <input type="text" placeholder="Add server" [(ngModel)]="server" /> -->
+<input type="text" placeholder="Add server" #serverInput />
 <br />
-<input type="text" placeholder="Add server content" [(ngModel)]="serverContent" />
+<!-- <input type="text" placeholder="Add server content" [(ngModel)]="serverContent" /> -->
+<input type="text" placeholder="Add server content" #serverContent />
 <br />
 <div>
-    <button (click)="addServer()">Add server</button>
+    <button (click)="addServer(serverInput)">Add server</button>
     <br />
-    <button (click)="addServerContent()">Add server content</button>
+    <button (click)="addServerContent(serverContent)">Add server content</button>
 </div>
 <section *ngIf="servers.length > 0">
     <h4>Servers</h4>

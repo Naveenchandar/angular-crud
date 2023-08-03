@@ -15,14 +15,15 @@ export class InputOutComponent {
     serverContent!: String
     servers: String[] = [];
     serversContent: String[] = [];
-    addServer() {
-        this.servers.push(this.server);
+    addServer(serverInput: HTMLInputElement) {
+        this.servers.push(serverInput.value);
         this.server = "";
     }
 
-    addServerContent() {
-        this.serversContent.push(this.serverContent);
+    addServerContent(serverContent: HTMLInputElement) {
+        this.serversContent.push(serverContent.value);
         this.serverContent = ""
+        serverContent.value = "";
     }
     updateServerDataContent() {
         this.eventFromApp.emit();
