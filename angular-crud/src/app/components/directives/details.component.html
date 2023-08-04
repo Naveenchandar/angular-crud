@@ -1,0 +1,10 @@
+<button (click)="toggleDetails()">Display Details</button>
+<p *ngIf="showDetails; else nosecret">This is secret text</p>
+<!-- ng template is for creating a template and #nosecret is reference of that template -->
+<ng-template #nosecret>
+    <p>No secret text</p>
+</ng-template>
+<ul *ngFor="let item of logList; let i = index" [ngStyle]="{backgroundColor: i > 3 ? 'blue' : 'beige'}"
+    [ngClass]="{'white-text': i > 3}">
+    <li>{{item}}</li>
+</ul>
