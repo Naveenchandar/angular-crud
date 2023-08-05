@@ -1,10 +1,18 @@
 <!-- <input type="text" [(ngModel)]="inputText">
 <p>{{inputText}}</p> -->
 <app-first></app-first>
-<app-second></app-second>
+<app-second>
+    <label #labelContent>I'm a child of app-second and i'm coming from main app component</label>
+</app-second>
 <app-data-binding></app-data-binding>
 <br />
 <!-- DIRECTIVES -->
 <app-details></app-details>
-<app-inputoutput [serverData]="serverData" (eventFromApp)="eventFromApp()" staticData="static data"></app-inputoutput>
+<app-inputoutput 
+[serverData]="serverData" 
+(eventFromApp)="eventFromApp()" 
+staticData="static data"
+>
+    <h1 style="color:red;">This is html element passing from app to child (content)</h1>
+</app-inputoutput>
 <p>paragraph in app component</p>
