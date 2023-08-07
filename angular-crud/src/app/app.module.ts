@@ -9,6 +9,9 @@ import { SecondComponent } from './components/second/second.component';
 import { DataBindingComponent } from './components/databinding/data-binding.component';
 import { DetailsComponent } from './components/directives/details.component';
 import { InputOutComponent } from './components/InputOutput/inputoutput.component';
+import { GameControlComponent } from './components/gamecontrol/gamecontrol.component';
+// import { EvenComponentManual } from './components/even/evenmanual.component';
+// import { OddManualComponent } from './components/odd/oddmanual.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { InputOutComponent } from './components/InputOutput/inputoutput.componen
     SecondComponent,
     DataBindingComponent,
     DetailsComponent,
-    InputOutComponent
+    InputOutComponent,
+    GameControlComponent,
+    // EvenComponentManual,
+    // OddManualComponent
   ],
   imports: [
     BrowserModule,
